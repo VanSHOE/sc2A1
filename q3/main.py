@@ -1,27 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define A matrix and T array
-A = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [1, -1, 0, 0], [1, 0, -1, 0], [1, 0, 0, -1], [0, 1, -1, 0],
-     [0, 1, 0, -1], [0, 0, 1, -1]]
-b = [2.95, 1.74, -1.45, 1.32, 1.23, 4.45, 1.61, 3.21, 0.45, -2.75]
+D = [0, 1, 5, 10]
 
-# Convert lists to numpy arrays
-A = np.array(A)
-b = np.array(b)
+for d in D:
+    M = np.random.normal(0, 1, (500, 500))
+    np.fill_diagonal(M, -d)
 
-# Calculate the transpose of A
-At = np.transpose(A)
+    eigenvalues = np.linalg.eigvals(M)
+    real = np.real(eigenvalues)
+    imag = np.imag(eigenvalues)
 
-# Calculate AtA and Atb
-AtA = np.dot(At, A)
-Atb = np.dot(At, b)
-
-# Calculate the inverse of AtA
-AtAI = np.linalg.inv(AtA)
-
-# Calculate W
-W = np.dot(AtAI, Atb)
-
-# Print the calculated W
-print("W:", W)
+    plt.scatter(real, imag)
+    plt.xlabel('Real(λ)')
+    plt.ylabel('Imag(λ)')
+    plt.title(f'D={d}')
+    plt.show()
