@@ -7,6 +7,12 @@ for d in D:
     M = np.random.normal(0, 1, (500, 500))
     np.fill_diagonal(M, -d)
 
+    # for i in range(500):
+    #     for j in range(i):
+    #         M[i][j] = -M[j][i]
+    #
+    # print(M)
+
     eigenvalues = np.linalg.eigvals(M)
     real = np.real(eigenvalues)
     imag = np.imag(eigenvalues)
@@ -15,4 +21,5 @@ for d in D:
     plt.xlabel('Real(λ)')
     plt.ylabel('Imag(λ)')
     plt.title(f'D={d}')
+    plt.savefig(f'M_D={d}.png')
     plt.show()
