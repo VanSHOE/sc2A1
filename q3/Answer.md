@@ -13,5 +13,5 @@ eigenvalues, but the precise effect will depend on the correlation structure. In
 structure of the matrix's components may result in a shift in the eigenvalues' distribution. For most correlations it
 will just stay an elliptical cloud .
 
-In case of the example mentioned we see that get more concentrated along the real axis and as D increases, this
-concentration reaches a level where it almost appears as a straight vertical line parallel to imaginary axis. 
+In case of the example mentioned of skew-symmetric we see that get more concentrated along the real axis almost forming
+an X shape centered at Real = 0 since the diagonal entries have to be 0 for this.  
