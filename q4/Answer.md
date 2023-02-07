@@ -10,11 +10,15 @@ Setting up the Ax = b equation we get:
 The linear square solution is almost same as the direct measurements.
 
 `2.95 <-> 2.96`
+Absolute Difference of 0.01
 
 `1.74 <-> 1.746`
+Absolute Difference of 0.006
 
 `-1.45 <-> -1.46`
+Absolute Difference of 0.01
 
 `1.32 <-> 1.314`
+Absolute Difference of 0.006
 
 As we can see there is only a max error of 0.01 in the linear square solution.
